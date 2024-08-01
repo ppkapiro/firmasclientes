@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Firmas de Clientes</title>
+</head>
+<body>
+    <h1>Generador de Firmas de Clientes</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="csv_file" accept=".csv" required>
+        <input type="date" name="start_date" required>
+        <input type="date" name="end_date" required>
+        <select name="time_period" required>
+            <option value="morning">Mañana</option>
+            <option value="afternoon">Tarde</option>
+        </select>
+        <button type="submit">Generar PDFs</button>
+    </form>
+</body>
+</html>
