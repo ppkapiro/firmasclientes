@@ -1,0 +1,20 @@
+[0;1;32m●[0m firmasclientes.service - Gunicorn instance to serve firmasclientes
+     Loaded: loaded (]8;;file://srv571914/etc/systemd/system/firmasclientes.service/etc/systemd/system/firmasclientes.service]8;;; [0;1;32menabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;32mactive (running)[0m since Thu 2024-08-01 22:39:53 UTC; 11s ago
+   Main PID: 7633 (gunicorn)
+      Tasks: 4 (limit: 4657)
+     Memory: 168.6M (peak: 168.7M)
+        CPU: 1.240s
+     CGroup: /system.slice/firmasclientes.service
+             ├─[0;38;5;245m7633 /var/www/firmasclientes/venv/bin/python3 /var/www/firmasclientes/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:5000 wsgi:app[0m
+             ├─[0;38;5;245m7635 /var/www/firmasclientes/venv/bin/python3 /var/www/firmasclientes/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:5000 wsgi:app[0m
+             ├─[0;38;5;245m7636 /var/www/firmasclientes/venv/bin/python3 /var/www/firmasclientes/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:5000 wsgi:app[0m
+             └─[0;38;5;245m7637 /var/www/firmasclientes/venv/bin/python3 /var/www/firmasclientes/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:5000 wsgi:app[0m
+
+Aug 01 22:39:53 srv571914 systemd[1]: Started firmasclientes.service - Gunicorn instance to serve firmasclientes.
+Aug 01 22:39:53 srv571914 gunicorn[7633]: [2024-08-01 22:39:53 +0000] [7633] [INFO] Starting gunicorn 22.0.0
+Aug 01 22:39:53 srv571914 gunicorn[7633]: [2024-08-01 22:39:53 +0000] [7633] [INFO] Listening at: http://127.0.0.1:5000 (7633)
+Aug 01 22:39:53 srv571914 gunicorn[7633]: [2024-08-01 22:39:53 +0000] [7633] [INFO] Using worker: sync
+Aug 01 22:39:53 srv571914 gunicorn[7635]: [2024-08-01 22:39:53 +0000] [7635] [INFO] Booting worker with pid: 7635
+Aug 01 22:39:53 srv571914 gunicorn[7636]: [2024-08-01 22:39:53 +0000] [7636] [INFO] Booting worker with pid: 7636
+Aug 01 22:39:53 srv571914 gunicorn[7637]: [2024-08-01 22:39:53 +0000] [7637] [INFO] Booting worker with pid: 7637
