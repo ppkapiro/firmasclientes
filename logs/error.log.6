@@ -1,0 +1,114 @@
+2024-08-02 19:54:08,590 ERROR: Error en upload_file: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead? [in /var/www/firmasclientes/app.py:273]
+Traceback (most recent call last):
+  File "/var/www/firmasclientes/app.py", line 271, in upload_file
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/firmasclientes/templates/index.html", line 12, in top-level template code
+    <form id="pdfForm" method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead?
+2024-08-02 19:55:20,439 INFO: Realizando diagnóstico del entorno [in /var/www/firmasclientes/app.py:49]
+2024-08-02 19:55:20,439 INFO: Contenido de UPLOAD_FOLDER: ['weekly_schedule_clients_final_example.csv'] [in /var/www/firmasclientes/app.py:50]
+2024-08-02 19:55:20,439 INFO: Contenido de OUTPUT_FOLDER: [] [in /var/www/firmasclientes/app.py:51]
+2024-08-02 19:55:20,443 ERROR: Error en upload_file: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead? [in /var/www/firmasclientes/app.py:273]
+Traceback (most recent call last):
+  File "/var/www/firmasclientes/app.py", line 271, in upload_file
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/firmasclientes/templates/index.html", line 12, in top-level template code
+    <form id="pdfForm" method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead?
+2024-08-02 19:56:51,253 INFO: Realizando diagnóstico del entorno [in /var/www/firmasclientes/app.py:49]
+2024-08-02 19:56:51,254 INFO: Contenido de UPLOAD_FOLDER: ['weekly_schedule_clients_final_example.csv'] [in /var/www/firmasclientes/app.py:50]
+2024-08-02 19:56:51,254 INFO: Contenido de OUTPUT_FOLDER: [] [in /var/www/firmasclientes/app.py:51]
+2024-08-02 19:56:51,258 ERROR: Error en upload_file: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead? [in /var/www/firmasclientes/app.py:273]
+Traceback (most recent call last):
+  File "/var/www/firmasclientes/app.py", line 271, in upload_file
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/firmasclientes/templates/index.html", line 12, in top-level template code
+    <form id="pdfForm" method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead?
+2024-08-02 20:04:23,389 INFO: Realizando diagnóstico del entorno [in /var/www/firmasclientes/app.py:49]
+2024-08-02 20:04:23,390 INFO: Contenido de UPLOAD_FOLDER: ['weekly_schedule_clients_final_example.csv'] [in /var/www/firmasclientes/app.py:50]
+2024-08-02 20:04:23,390 INFO: Contenido de OUTPUT_FOLDER: [] [in /var/www/firmasclientes/app.py:51]
+2024-08-02 20:04:47,321 INFO: Realizando diagnóstico del entorno [in /var/www/firmasclientes/app.py:49]
+2024-08-02 20:04:47,321 INFO: Contenido de UPLOAD_FOLDER: ['weekly_schedule_clients_final_example.csv'] [in /var/www/firmasclientes/app.py:50]
+2024-08-02 20:04:47,322 INFO: Contenido de OUTPUT_FOLDER: [] [in /var/www/firmasclientes/app.py:51]
+2024-08-02 20:04:47,322 INFO: Recepción de archivo CSV iniciado [in /var/www/firmasclientes/app.py:195]
+2024-08-02 20:04:47,324 INFO: Opción de fecha seleccionada: range [in /var/www/firmasclientes/app.py:200]
+2024-08-02 20:04:47,324 INFO: Periodo de tiempo seleccionado: morning [in /var/www/firmasclientes/app.py:201]
+2024-08-02 20:04:47,324 INFO: Procesando rango de fechas [in /var/www/firmasclientes/app.py:209]
+2024-08-02 20:04:47,324 INFO: Fechas de rango recibidas: inicio=2024-07-29, fin=2024-08-05 [in /var/www/firmasclientes/app.py:212]
+2024-08-02 20:04:47,325 INFO: Generando fechas semanales desde 2024-07-29 hasta 2024-08-05 [in /var/www/firmasclientes/app.py:144]
+2024-08-02 20:04:47,327 INFO: Fechas convertidas: start_date=2024-07-29 00:00:00, end_date=2024-08-05 00:00:00 [in /var/www/firmasclientes/app.py:147]
+2024-08-02 20:04:47,327 INFO: Fecha añadida: 2024-07-29 [in /var/www/firmasclientes/app.py:153]
+2024-08-02 20:04:47,328 INFO: Próxima fecha a considerar: 2024-08-05 00:00:00 [in /var/www/firmasclientes/app.py:155]
+2024-08-02 20:04:47,328 INFO: Fecha añadida: 2024-08-05 [in /var/www/firmasclientes/app.py:153]
+2024-08-02 20:04:47,328 INFO: Próxima fecha a considerar: 2024-08-12 00:00:00 [in /var/www/firmasclientes/app.py:155]
+2024-08-02 20:04:47,329 INFO: Fechas generadas: ['2024-07-29', '2024-08-05'] [in /var/www/firmasclientes/app.py:157]
+2024-08-02 20:04:47,329 INFO: Fechas seleccionadas/generadas: ['2024-07-29', '2024-08-05'] [in /var/www/firmasclientes/app.py:218]
+2024-08-02 20:04:47,329 INFO: Archivo CSV guardado en: /var/www/firmasclientes/uploads/weekly_schedule_clients_final_example_1.csv [in /var/www/firmasclientes/app.py:228]
+2024-08-02 20:04:47,330 INFO: Iniciando la creación de PDFs semanales desde el CSV para las fechas: ['2024-07-29', '2024-08-05'] [in /var/www/firmasclientes/app.py:55]
+2024-08-02 20:04:47,332 INFO: CSV leído correctamente: /var/www/firmasclientes/uploads/weekly_schedule_clients_final_example_1.csv [in /var/www/firmasclientes/app.py:62]
+2024-08-02 20:04:47,333 INFO: Generando PDFs para la semana comenzando el 2024-07-29 00:00:00 [in /var/www/firmasclientes/app.py:66]
+2024-08-02 20:04:47,334 INFO: Llenando PDF para 87 MARIA TERESA LEAL ALFARO [in /var/www/firmasclientes/app.py:105]
+2024-08-02 20:04:47,419 INFO: PDF creado: /var/www/firmasclientes/output/Week_2024-07-29/87 MARIA TERESA LEAL ALFARO_Week_07-29-2024.pdf [in /var/www/firmasclientes/app.py:98]
+2024-08-02 20:04:47,420 INFO: Llenando PDF para 75 SONIA DELIS [in /var/www/firmasclientes/app.py:105]
+2024-08-02 20:04:50,089 INFO: Intentando descargar el archivo: output.zip [in /var/www/firmasclientes/app.py:279]

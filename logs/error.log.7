@@ -1,0 +1,86 @@
+2024-08-02 19:38:53,021 INFO: Intentando descargar el archivo: output.zip [in /var/www/firmasclientes/app.py:279]
+2024-08-02 19:38:53,022 INFO: Ruta del archivo ZIP: /var/www/firmasclientes/output/output.zip [in /var/www/firmasclientes/app.py:281]
+2024-08-02 19:38:53,023 INFO: Iniciando limpieza después de la descarga del archivo: output.zip [in /var/www/firmasclientes/app.py:290]
+2024-08-02 19:38:53,023 INFO: Eliminando archivo ZIP: /var/www/firmasclientes/output/output.zip [in /var/www/firmasclientes/app.py:292]
+2024-08-02 19:38:53,024 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/179 GISELLE FRIAS_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,024 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/221 NORA STELLA BENEDIT_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,024 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/205 NESTOR GONZALEZ_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,025 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/220 BRUNO JOSE MACHADO_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,025 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/75 SONIA DELIS_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,025 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/180 ORLANDO PEDRO RUBIO RUIZ_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,025 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/109 NORMA HIDALGO_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,026 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/79 NEREIDA PALMES GONZALEZ_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,026 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/224 MARIA ESTHER MORALES CONCEPCION_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,026 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/87 MARIA TERESA LEAL ALFARO_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,026 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/108 PEDRO GUEVARA_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,027 INFO: Eliminando archivo PDF: /var/www/firmasclientes/output/Week_2024-08-05/80 JUANA LUCRECIA ROSALES ROSABAL_Week_08-05-2024.pdf [in /var/www/firmasclientes/app.py:301]
+2024-08-02 19:38:53,027 INFO: Eliminando directorio de semana: /var/www/firmasclientes/output/Week_2024-08-05 [in /var/www/firmasclientes/app.py:303]
+2024-08-02 19:43:12,778 INFO: Realizando diagnóstico del entorno [in /var/www/firmasclientes/app.py:49]
+2024-08-02 19:43:12,779 INFO: Contenido de UPLOAD_FOLDER: ['weekly_schedule_clients_final_example.csv'] [in /var/www/firmasclientes/app.py:50]
+2024-08-02 19:43:12,779 INFO: Contenido de OUTPUT_FOLDER: [] [in /var/www/firmasclientes/app.py:51]
+2024-08-02 19:43:48,027 INFO: Realizando diagnóstico del entorno [in /var/www/firmasclientes/app.py:49]
+2024-08-02 19:43:48,028 INFO: Contenido de UPLOAD_FOLDER: ['weekly_schedule_clients_final_example.csv'] [in /var/www/firmasclientes/app.py:50]
+2024-08-02 19:43:48,029 INFO: Contenido de OUTPUT_FOLDER: [] [in /var/www/firmasclientes/app.py:51]
+2024-08-02 19:51:49,786 INFO: Realizando diagnóstico del entorno [in /var/www/firmasclientes/app.py:49]
+2024-08-02 19:51:49,787 INFO: Contenido de UPLOAD_FOLDER: ['weekly_schedule_clients_final_example.csv'] [in /var/www/firmasclientes/app.py:50]
+2024-08-02 19:51:49,788 INFO: Contenido de OUTPUT_FOLDER: [] [in /var/www/firmasclientes/app.py:51]
+2024-08-02 19:51:49,792 ERROR: Error en upload_file: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead? [in /var/www/firmasclientes/app.py:273]
+Traceback (most recent call last):
+  File "/var/www/firmasclientes/app.py", line 271, in upload_file
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/firmasclientes/templates/index.html", line 12, in top-level template code
+    <form id="pdfForm" method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead?
+2024-08-02 19:53:06,017 INFO: Realizando diagnóstico del entorno [in /var/www/firmasclientes/app.py:49]
+2024-08-02 19:53:06,017 INFO: Contenido de UPLOAD_FOLDER: ['weekly_schedule_clients_final_example.csv'] [in /var/www/firmasclientes/app.py:50]
+2024-08-02 19:53:06,017 INFO: Contenido de OUTPUT_FOLDER: [] [in /var/www/firmasclientes/app.py:51]
+2024-08-02 19:53:06,021 ERROR: Error en upload_file: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead? [in /var/www/firmasclientes/app.py:273]
+Traceback (most recent call last):
+  File "/var/www/firmasclientes/app.py", line 271, in upload_file
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/var/www/firmasclientes/templates/index.html", line 12, in top-level template code
+    <form id="pdfForm" method="POST" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/flask/app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/firmasclientes/venv/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'upload_file'. Did you mean 'firmasclientes.upload_file' instead?
+2024-08-02 19:54:08,586 INFO: Realizando diagnóstico del entorno [in /var/www/firmasclientes/app.py:49]
+2024-08-02 19:54:08,587 INFO: Contenido de UPLOAD_FOLDER: ['weekly_schedule_clients_final_example.csv'] [in /var/www/firmasclientes/app.py:50]
+2024-08-02 19:54:08,587 INFO: Contenido de OUTPUT_FOLDER: [] [in /var/www/firmasclientes/app.py:51]

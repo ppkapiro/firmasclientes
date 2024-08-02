@@ -1,0 +1,23 @@
+2024-08-02 20:06:15,403 INFO: Creando archivo ZIP en: /var/www/firmasclientes/output/output.zip [in /var/www/firmasclientes/app.py:165]
+2024-08-02 20:06:15,405 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/220 BRUNO JOSE MACHADO_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,406 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/87 MARIA TERESA LEAL ALFARO_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,408 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/75 SONIA DELIS_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,409 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/180 ORLANDO PEDRO RUBIO RUIZ_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,411 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/80 JUANA LUCRECIA ROSALES ROSABAL_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,412 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/221 NORA STELLA BENEDIT_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,414 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/224 MARIA ESTHER MORALES CONCEPCION_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,415 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/179 GISELLE FRIAS_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,417 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/79 NEREIDA PALMES GONZALEZ_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,418 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/109 NORMA HIDALGO_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,420 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/205 NESTOR GONZALEZ_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,421 INFO: Añadiendo /var/www/firmasclientes/output/Week_2024-08-06/108 PEDRO GUEVARA_Week_08-06-2024.pdf al archivo ZIP [in /var/www/firmasclientes/app.py:171]
+2024-08-02 20:06:15,422 INFO: Archivo ZIP creado correctamente: /var/www/firmasclientes/output/output.zip [in /var/www/firmasclientes/app.py:177]
+2024-08-02 20:06:15,423 INFO: Contenido del archivo ZIP: ['Week_2024-08-06/220 BRUNO JOSE MACHADO_Week_08-06-2024.pdf', 'Week_2024-08-06/87 MARIA TERESA LEAL ALFARO_Week_08-06-2024.pdf', 'Week_2024-08-06/75 SONIA DELIS_Week_08-06-2024.pdf', 'Week_2024-08-06/180 ORLANDO PEDRO RUBIO RUIZ_Week_08-06-2024.pdf', 'Week_2024-08-06/80 JUANA LUCRECIA ROSALES ROSABAL_Week_08-06-2024.pdf', 'Week_2024-08-06/221 NORA STELLA BENEDIT_Week_08-06-2024.pdf', 'Week_2024-08-06/224 MARIA ESTHER MORALES CONCEPCION_Week_08-06-2024.pdf', 'Week_2024-08-06/179 GISELLE FRIAS_Week_08-06-2024.pdf', 'Week_2024-08-06/79 NEREIDA PALMES GONZALEZ_Week_08-06-2024.pdf', 'Week_2024-08-06/109 NORMA HIDALGO_Week_08-06-2024.pdf', 'Week_2024-08-06/205 NESTOR GONZALEZ_Week_08-06-2024.pdf', 'Week_2024-08-06/108 PEDRO GUEVARA_Week_08-06-2024.pdf'] [in /var/www/firmasclientes/app.py:182]
+2024-08-02 20:06:15,424 INFO: Contenido del directorio de salida después de crear el ZIP: ['output.zip', 'Week_2024-08-06'] [in /var/www/firmasclientes/app.py:241]
+2024-08-02 20:06:15,424 INFO: Iniciando limpieza de archivos [in /var/www/firmasclientes/app.py:246]
+2024-08-02 20:06:15,424 ERROR: Error durante la limpieza: cannot access local variable 'file_path' where it is not associated with a value [in /var/www/firmasclientes/app.py:266]
+Traceback (most recent call last):
+  File "/var/www/firmasclientes/app.py", line 247, in cleanup
+    if file_path and os.path.exists(file_path):
+       ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'file_path' where it is not associated with a value
