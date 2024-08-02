@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Firmas de Clientes</title>
+    <title>Generar PDFs</title>
+    <script>
+        function toggleDateFields() {
+            var selection = document.getElementById('date_option').value;
+            if (selection === 'range') {
+                document.getElementById('date_range_fields').style.display = 'block';
+                document.getElementById('specific_dates_fields').style.display = 'none';
+            } else if (selection === 'specific') {
+                document.getElementById('date_range_fields').style.display = 'none';
+                document.getElementById('specific_dates_fields').style.display = 'block';
+            }
+        }
+
+        function addDateField() {
+            var container = document.getElementById('specific_dates_container');
+            var input = document.createElement('input');
+            input.type = 'date';
+            input.name = 'specific_dates[]';
+            container.appendChild(input);
+            container.appendChild(document.createElement('br'));
+        }
+    </script>
 </head>
 <body>
-    <h1>Generador de Firmas de Clientes</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="csv_file" accept=".csv" required>
-        <input type="date" name="start_date" required>
-        <input type="date" name="end_date" required>
-        <select name="time_period" required>
+    <h1>Generar PDFs de Firmas</h1>
+    <form action="/firmasclientes" method="post" enctype="multipart/form-data">
+        <label for="csv_file">Archivo CSV:</label>
+        <input type="file" id="csv_file" name="csv_file" required><br><br>
+
+        <label for="time_period">Período de tiempo (mañana/tarde):</label>
+        <select id="time_period" name="time_period" required>
             <option value="morning">Mañana</option>
             <option value="afternoon">Tarde</option>
-        </select>
+        </select><br><br>
+
+        <label for="date_option">Seleccione un tipo de fecha:</label>
+        <select id="date_option" name="date_option" onchange="toggleDateFields()" required>
+            <option value="range">Intervalo de fechas</option>
+            <option value="specific">Fechas específicas</option>
+        </select><br><br>
+
+        <div id="date_range_fields">
+            <label for="start_date">Fecha de inicio:</label>
+            <input type="date" id="start_date" name="start_date"><br><br>
+
+            <label for="end_date">Fecha de fin:</label>
+            <input type="date" id="end_date" name="end_date"><br><br>
+        </div>
+
+        <div id="specific_dates_fields" style="display: none;">
+            <label for="specific_dates">Fechas específicas (siempre lunes):</label>
+            <div id="specific_dates_container">
+                <input type="date" name="specific_dates[]">
+                <br>
+            </div>
+            <button type="button" onclick="addDateField()">Agregar otra fecha</button><br><br>
+        </div>
+
         <button type="submit">Generar PDFs</button>
     </form>
 </body>

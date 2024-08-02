@@ -138,7 +138,7 @@ def create_zip(zip_filename, directories):
                     for file in files:
                         file_path = os.path.join(root, file)
                         app.logger.info(f"Añadiendo {file_path} al ZIP")
-                        zipf.write(file_path, os.path.relpath(file_path, start=directories[0]))
+                        zipf.write(file_path, os.path.relpath(file_path, start=os.path.dirname(directory)))
         app.logger.info(f"ZIP creado correctamente: {zip_filename}")
 
         # Verificar el contenido del archivo ZIP
@@ -158,10 +158,16 @@ def upload_file():
         if request.method == 'POST':
             file = request.files['csv_file']
             time_period = request.form['time_period']
+            date_option = request.form['date_option']
 
-            start_date = request.form['start_date']
-            end_date = request.form['end_date']
-            start_dates = generate_weekly_dates(start_date, end_date)
+            start_dates = []
+            if date_option == 'specific':
+                start_dates = request.form.getlist('specific_dates[]')
+                start_dates = [date.strip() for date in start_dates if date.strip()]
+            else:
+                start_date = request.form['start_date']
+                end_date = request.form['end_date']
+                start_dates = generate_weekly_dates(start_date, end_date)
 
             if file:
                 filename = secure_filename(file.filename)
@@ -220,6 +226,33 @@ def upload_file():
 def download_file(filename):
     try:
         app.logger.info(f"Intentando descargar el archivo: {filename}")
+
+        @after_this_request
+        def cleanup(response):
+            try:
+                app.logger.info(f"Iniciando limpieza después de la descarga del archivo: {filename}")
+                # Eliminar el archivo ZIP
+                zip_path = os.path.join(app.config['OUTPUT_FOLDER'], filename)
+                if os.path.isfile(zip_path):
+                    app.logger.info(f"Eliminando archivo ZIP: {zip_path}")
+                    os.remove(zip_path)
+
+                # Eliminar los directorios generados
+                directories = [os.path.join(app.config['OUTPUT_FOLDER'], d) for d in os.listdir(app.config['OUTPUT_FOLDER']) if os.path.isdir(os.path.join(app.config['OUTPUT_FOLDER'], d))]
+                for directory in directories:
+                    for root, _, files in os.walk(directory):
+                        for file in files:
+                            file_path = os.path.join(root, file)
+                            if os.path.isfile(file_path):
+                                app.logger.info(f"Eliminando archivo PDF: {file_path}")
+                                os.remove(file_path)
+                    app.logger.info(f"Eliminando directorio de semana: {directory}")
+                    os.rmdir(directory)
+
+            except Exception as e:
+                app.logger.error(f"Error durante la limpieza después de la descarga: {e}")
+            return response
+
         return send_from_directory(app.config['OUTPUT_FOLDER'], filename)
     except Exception as e:
         app.logger.error(f"Error en download_file: {e}")
